@@ -205,7 +205,7 @@ function App() {
                    <Utensils className="w-4 h-4 text-yellow-400" />
                 </div>
                 <div>
-                  <p className="text-yellow-200 font-bold leading-none">1kg de Carne</p>
+                  <p className="text-yellow-200 font-bold leading-none">Carne, Linguiça ou Frango</p>
                   <p className="text-yellow-500/60 text-xs mt-1 italic font-medium">(para o T-Rex não te comer!)</p>
                 </div>
               </div>
