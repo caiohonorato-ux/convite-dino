@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FONTES */
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+/* VAGALUMES */
+@keyframes floatUp {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(-100vh) translateX(20px); opacity: 0; }
+}
+
+.firefly {
+  position: absolute;
+  bottom: -10px;
+  background: #bef264;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #bef264, 0 0 20px #bef264;
+  opacity: 0;
+  animation: floatUp linear infinite;
+}
+
+/* PEGADAS */
+@keyframes fadeUp {
+  0% { transform: scale(0.5) rotate(0deg); opacity: 1; }
+  100% { transform: scale(1.5) rotate(10deg); opacity: 0; }
+}
+
+.footprint {
+  position: absolute;
+  pointer-events: none;
+  animation: fadeUp 1s ease-out forwards;
+  z-index: 50;
+  color: #4ade80;
+}
+
+/* TREMOR DE TELA (EARTHQUAKE) */
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake-screen {
+  /* MUDANÇA AQUI: 'infinite' para tremer sem parar por 6.9s */
+  animation: shake 0.69s cubic-bezier(.36,.07,.19,.97) infinite;
+}
