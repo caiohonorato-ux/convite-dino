@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import RsvpManager from './components/RsvpManager';
-import { Footprints, Volume2, PackageOpen, Utensils, GlassWater } from 'lucide-react';
+import { Footprints, Volume2, PackageOpen, Utensils, GlassWater, Code } from 'lucide-react';
 
 // Função auxiliar para garantir dois dígitos
 const formatTime = (time) => {
@@ -218,9 +218,17 @@ function App() {
         <RsvpManager />
 
         <footer className="mt-12 border-t border-white/10 pt-8 text-center text-slate-400 text-sm bg-slate-950/60 w-full backdrop-blur-xl pb-8 rounded-t-3xl border-x border-x-white/5 shadow-2xl relative z-10">
-          <div className="flex flex-col gap-2 px-4">
+          <div className="flex flex-col gap-2 px-4 items-center">
             <p className="text-white font-medium text-lg md:text-xl font-dino tracking-wide text-green-400">📅 21 de Dezembro • 18:00h</p>
-            <p className="text-slate-300 leading-relaxed">📍 Casa do Zyon<br/>Travessa Cinco de Outubro - SC, 122</p>
+            <p className="text-slate-300 leading-relaxed mb-2">📍 Casa do Zyon<br/>Travessa Cinco de Outubro - SC, 122</p>
+            
+            {/* Créditos ao Papai */}
+            <div className="mt-4">
+               <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] text-white/40 uppercase tracking-widest hover:bg-white/10 transition-colors">
+                 <Code className="w-3 h-3" /> desenvolvido pelo papai Caio
+               </span>
+            </div>
+
           </div>
         </footer>
 
